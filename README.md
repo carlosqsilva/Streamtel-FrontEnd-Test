@@ -28,5 +28,5 @@ A agenda deve:
 
 * [x] Persista os contatos utilzando Local Storage ou IndexDB; (Utilizei [redux-persist](https://github.com/rt2zz/redux-persist) com [localForage](https://github.com/localForage/localForage))
 * [ ] Utilizar algum pré-processador CSS como Sass ou Less; (Fiz uso de [styled-components](https://github.com/styled-components/styled-components))
-* [x] Adicionar foto ao cadastro do contato. (Dica procure por conversão de imagens para Base64);
+* [x] Adicionar foto ao cadastro do contato.
 * [x] Fazer com que seja responsivo.
