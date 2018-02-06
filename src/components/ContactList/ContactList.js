@@ -30,7 +30,10 @@ class ContactList extends React.Component {
     const { filter } = this.state
     return (
       <Fragment>
-        <SearchInput onChange={this.handleFilter} />
+        <SearchInput
+          onChange={this.handleFilter}
+          placeholder="Buscar contato..."
+        />
         <Wrapper>
           {contacts
             .filter(

@@ -51,7 +51,7 @@ export const SearchInput = ({ onChange, ...props }) => (
   <Header>
     <Wrapper>
       <Icon src={lupa} alt="" />
-      <Input onChange={onChange} />
+      <Input onChange={onChange} {...props} />
     </Wrapper>
   </Header>
 )

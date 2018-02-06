@@ -33,7 +33,9 @@ const Info = styled.div`
   align-self: flex-start;
   > p {
     margin: 0;
+    color: #424242;
     &:first-child {
+      color: #212121;
       font-size: 0.9rem;
       font-weight: bold;
     }

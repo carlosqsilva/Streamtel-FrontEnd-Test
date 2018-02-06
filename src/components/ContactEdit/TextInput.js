@@ -19,12 +19,15 @@ const Input = styled.input`
   outline: none;
   border: none;
   border-bottom: 1px solid #444;
-  width: 250px;
+  min-width: 280px;
   &:invalid {
     border-bottom: 1px solid red;
   }
   &:focus ~ label {
     ${labelUp};
+  }
+  @media (min-width: 550px) {
+    width: 500px;
   }
 `
 
