@@ -10,8 +10,8 @@ A agenda deve:
 * [x] Excluir contato.
 * [x] Utilize os seguintes wireframe como base.
 
-<img src="wireframe-1.jpg" alt="Drawing" style="width: 300px;"/>
-<img src="wireframe-2.jpg" alt="Drawing" style="width: 300px;"/>
+<img src="wireframe-1.jpg" alt="Drawing" width="250" />
+<img src="wireframe-2.jpg" alt="Drawing" width="250" />
 
 ### Requisitos
 
@@ -22,6 +22,6 @@ A agenda deve:
 ## Extras
 
 * [x] Persista os contatos utilzando Local Storage ou IndexDB; (utilizei [redux-persist](https://github.com/rt2zz/redux-persist) com [localForage](https://github.com/localForage/localForage))
-* [] Utilizar algum pré-processador CSS como Sass ou Less; (fiz uso de [styled-components](https://github.com/styled-components/styled-components))
+* [ ] Utilizar algum pré-processador CSS como Sass ou Less; (fiz uso de [styled-components](https://github.com/styled-components/styled-components))
 * [x] Adicionar foto ao cadastro do contato. (Dica procure por conversão de imagens para Base64);
 * [x] Fazer com que seja responsivo.
