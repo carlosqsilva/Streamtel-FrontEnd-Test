@@ -1,6 +1,9 @@
 # Streamtel Front-End Test
 
-<img src="screenshot.png" alt="Drawing" width="550" />
+* Demo: [clique aqui](https://carlosqsilva.github.io/Streamtel-FrontEnd-Test/)
+* Meu Site: [carloseng.com](https://carloseng.com)
+
+![screenshot](./screenshot.png)
 
 Criar um web app de uma agenda de contatos.
 
@@ -12,8 +15,8 @@ A agenda deve:
 * [x] Excluir contato.
 * [x] Utilize os seguintes wireframe como base.
 
-<img src="wireframe-1.jpg" alt="Drawing" width="250" />
-<img src="wireframe-2.jpg" alt="Drawing" width="250" />
+<img src="wireframe-1.jpg" alt="wireframe" width="250" />
+<img src="wireframe-2.jpg" alt="wireframe" width="250" />
 
 ### Requisitos
 
