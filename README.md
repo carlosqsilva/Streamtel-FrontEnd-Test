@@ -1,5 +1,7 @@
 # Streamtel Front-End Test
 
+<img src="screenshot.png" alt="Drawing" width="550" />
+
 Criar um web app de uma agenda de contatos.
 
 A agenda deve:
