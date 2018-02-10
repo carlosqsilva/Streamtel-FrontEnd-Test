@@ -1,7 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 import { Header } from "./Header"
-import { EditButton, RemoveButton } from "../Buttons"
+import { EditButton } from "../Buttons"
+import { NavBar } from "../NavBar"
 
 const Wrapper = styled.div`
   grid-column: 2;
@@ -10,7 +11,7 @@ const Wrapper = styled.div`
 
 const Container = styled.div`
   padding: 20px;
-  display; flex;
+  display: flex;
   flex-direction: column;
   justify-content: flex-start;
 `
@@ -33,16 +34,19 @@ const ContactInfo = ({ match, contacts, remove, history }) => {
   )
   return (
     <Wrapper>
+      <NavBar
+        title={name}
+        previous={history.goBack}
+        actionLabel="Excluir"
+        action={() => {
+          history.push("/")
+          remove(id)
+        }}
+      />
       <Header background={picture}>
         <p>
           <span>{name}</span> <span>{last_name}</span>
         </p>
-        <RemoveButton
-          onClick={() => {
-            history.push("/")
-            remove(id)
-          }}
-        />
         <EditButton to={`/edit/${id}`} />
       </Header>
       <Container>

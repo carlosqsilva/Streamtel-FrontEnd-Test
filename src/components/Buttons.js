@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 
 import add from "./assets/add.svg"
 import edit from "./assets/edit.svg"
-import remove from "./assets/remove.svg"
+// import remove from "./assets/remove.svg"
 
 const style = css`
   width: 50px;
@@ -34,10 +34,10 @@ export const AddButton = styled(Link)`
   background: #ea4c4c url(${add}) no-repeat 50% 50%;
 `
 
-export const RemoveButton = styled.a`
-  ${style};
-  position: absolute;
-  top: 30px;
-  right: 30px;
-  background: #212121 url(${remove}) no-repeat 50% 50%;
-`
+// export const RemoveButton = styled.a`
+//   ${style};
+//   position: absolute;
+//   top: 30px;
+//   right: 30px;
+//   background: #212121 url(${remove}) no-repeat 50% 50%;
+// `

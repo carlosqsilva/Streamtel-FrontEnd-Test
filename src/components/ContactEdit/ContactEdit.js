@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { TextInput, MaskInput } from "./TextInput"
 import { Photo } from "./ImageInput"
+import { NavBar } from "../NavBar"
 
 const toBase64 = file => {
   return new Promise((resolve, reject) => {
@@ -12,10 +13,13 @@ const toBase64 = file => {
   })
 }
 
-const Container = styled.form`
+const Wrapper = styled.div`
   grid-column: 2;
-  position: relative;
   padding-bottom: 50px;
+`
+
+const Form = styled.form`
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -64,51 +68,66 @@ class ContactEdit extends React.Component {
     }
   }
 
+  handleSubmit = e => {
+    e.preventDefault()
+    this.props.history.goBack()
+  }
+
   render() {
     const { name, last_name, email, phone, address, picture } = this.state
+    const { goBack } = this.props.history
     return (
-      <Container>
-        <Photo image={picture} onChange={this.pictureChange} />
-        <TextInput
-          name="name"
-          label="Nome"
-          value={name}
-          onChange={this.textChange}
-          required
-          tabIndex="1"
+      <Wrapper>
+        <NavBar
+          title={name}
+          previous={goBack}
+          action={goBack}
+          actionLabel="Salvar"
         />
-        <TextInput
-          name="last_name"
-          label="Sobrenome"
-          value={last_name}
-          onChange={this.textChange}
-          tabIndex="2"
-        />
-        <TextInput
-          name="email"
-          label="Email"
-          type="email"
-          value={email}
-          onChange={this.textChange}
-          tabIndex="3"
-        />
-        <MaskInput
-          name="phone"
-          label="Telefone"
-          type="tel"
-          mask="(99) 99999-9999"
-          value={phone}
-          onChange={this.textChange}
-          tabIndex="4"
-        />
-        <TextInput
-          name="address"
-          label="Endereço"
-          value={address}
-          onChange={this.textChange}
-          tabIndex="5"
-        />
-      </Container>
+        <Form onSubmit={this.handleSubmit}>
+          <Photo image={picture} onChange={this.pictureChange} />
+          <TextInput
+            name="name"
+            label="Nome"
+            value={name}
+            onChange={this.textChange}
+            required
+            tabIndex="1"
+          />
+          <TextInput
+            name="last_name"
+            label="Sobrenome"
+            value={last_name}
+            onChange={this.textChange}
+            tabIndex="2"
+          />
+          <TextInput
+            name="email"
+            label="Email"
+            type="email"
+            value={email}
+            onChange={this.textChange}
+            tabIndex="3"
+          />
+          <MaskInput
+            name="phone"
+            label="Telefone"
+            type="tel"
+            mask="(99) 99999-9999"
+            value={phone}
+            onChange={this.textChange}
+            tabIndex="4"
+          />
+          <TextInput
+            name="address"
+            label="Endereço"
+            value={address}
+            onChange={this.textChange}
+            tabIndex="5"
+          />
+          <input type="submit" style={{ display: "none" }} />
+        </Form>
+      </Wrapper>
     )
   }
 }
