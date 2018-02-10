@@ -20,15 +20,26 @@ class App extends Component {
     return (
       <Router>
         <Container>
-          <Route exact path="/" render={props => <ContactList contacts={contact} {...props} />} />
-          <Route path="/new" render={props => <ContactEdit submit={add} {...props} />} />
+          <Route
+            exact
+            path="/"
+            render={props => <ContactList contacts={contact} {...props} />}
+          />
+          <Route
+            path="/new"
+            render={props => <ContactEdit submit={add} {...props} />}
+          />
           <Route
             path="/contact/:id"
-            render={props => <ContactInfo remove={remove} contacts={contact} {...props} />}
+            render={props => (
+              <ContactInfo remove={remove} contacts={contact} {...props} />
+            )}
           />
           <Route
             path="/edit/:id"
-            render={props => <ContactEdit submit={update} contacts={contact} {...props} />}
+            render={props => (
+              <ContactEdit submit={update} contacts={contact} {...props} />
+            )}
           />
         </Container>
       </Router>

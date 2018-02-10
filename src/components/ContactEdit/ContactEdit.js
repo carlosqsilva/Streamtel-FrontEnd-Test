@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { TextInput } from "./TextInput"
+import { TextInput, MaskInput } from "./TextInput"
 import { Photo } from "./ImageInput"
 
 const toBase64 = file => {
@@ -15,6 +15,7 @@ const toBase64 = file => {
 const Container = styled.form`
   grid-column: 2;
   position: relative;
+  padding-bottom: 50px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -68,7 +69,14 @@ class ContactEdit extends React.Component {
     return (
       <Container>
         <Photo image={picture} onChange={this.pictureChange} />
-        <TextInput name="name" label="Nome" value={name} onChange={this.textChange} required tabIndex="1" />
+        <TextInput
+          name="name"
+          label="Nome"
+          value={name}
+          onChange={this.textChange}
+          required
+          tabIndex="1"
+        />
         <TextInput
           name="last_name"
           label="Sobrenome"
@@ -84,8 +92,22 @@ class ContactEdit extends React.Component {
           onChange={this.textChange}
           tabIndex="3"
         />
-        <TextInput name="phone" label="Telefone" value={phone} onChange={this.textChange} tabIndex="4" />
-        <TextInput name="address" label="Endereço" value={address} onChange={this.textChange} tabIndex="5" />
+        <MaskInput
+          name="phone"
+          label="Telefone"
+          type="tel"
+          mask="(99) 99999-9999"
+          value={phone}
+          onChange={this.textChange}
+          tabIndex="4"
+        />
+        <TextInput
+          name="address"
+          label="Endereço"
+          value={address}
+          onChange={this.textChange}
+          tabIndex="5"
+        />
       </Container>
     )
   }

@@ -1,5 +1,6 @@
 import React from "react"
 import styled, { css } from "styled-components"
+import InputMask from "react-input-mask"
 
 const Container = styled.div`
   position: relative;
@@ -46,6 +47,15 @@ const Label = styled.label`
 export const TextInput = ({ value, onChange, name, label, ...props }) => (
   <Container>
     <Input value={value} onChange={onChange} name={name} {...props} />
+    <Label empty={value.length === 0}>{label}</Label>
+  </Container>
+)
+
+const Mask = Input.withComponent(InputMask)
+
+export const MaskInput = ({ value, onChange, name, label, ...props }) => (
+  <Container>
+    <Mask value={value} onChange={onChange} name={name} {...props} />
     <Label empty={value.length === 0}>{label}</Label>
   </Container>
 )
