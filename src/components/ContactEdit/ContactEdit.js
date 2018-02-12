@@ -86,7 +86,7 @@ class ContactEdit extends React.Component {
           actionLabel="Salvar"
         />
         <Wrapper>
-          <Form onSubmit={this.handleSubmit}>
+          <Form onSubmit={this.handleSubmit} autoComplete="off">
             <Photo image={picture} onChange={this.pictureChange} />
             <TextInput
               name="name"

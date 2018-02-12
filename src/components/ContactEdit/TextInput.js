@@ -46,7 +46,13 @@ const Label = styled.label`
 
 export const TextInput = ({ value, onChange, name, label, ...props }) => (
   <Container>
-    <Input value={value} onChange={onChange} name={name} {...props} />
+    <Input
+      value={value}
+      onChange={onChange}
+      name={name}
+      {...props}
+      autoComplete="off"
+    />
     <Label empty={value.length === 0}>{label}</Label>
   </Container>
 )
@@ -55,7 +61,13 @@ const Mask = Input.withComponent(InputMask)
 
 export const MaskInput = ({ value, onChange, name, label, ...props }) => (
   <Container>
-    <Mask value={value} onChange={onChange} name={name} {...props} />
+    <Mask
+      value={value}
+      onChange={onChange}
+      name={name}
+      {...props}
+      autoComplete="off"
+    />
     <Label empty={value.length === 0}>{label}</Label>
   </Container>
 )
