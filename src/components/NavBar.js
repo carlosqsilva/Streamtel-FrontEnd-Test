@@ -3,17 +3,24 @@ import styled from "styled-components"
 import back from "./assets/back.svg"
 
 const Wrapper = styled.nav`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: grid;
+  grid-template-columns: 1fr minmax(300px, 960px) 1fr;
+  height: 55px;
   background: #f9f9f9;
-  padding: 20px 5px;
-  width: 100%;
-  height: 50px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05);
+  z-index: 1;
+`
+
+const Container = styled.div`
+  grid-column: 2;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.9rem;
-  @media (min-width: 550px) {
-    font-size: 1.1rem;
-  }
+  padding: 0 5px;
 `
 
 const Title = styled.h3`
@@ -23,23 +30,24 @@ const Title = styled.h3`
   color: #424242;
 `
 
-const NavButton = styled.div`
+const NavButton = styled.a`
   display: inline-flex;
   justify-content: flex-start;
   align-items: center;
   align-self: center;
-  font-size: 1em;
   color: #007aff;
   cursor: pointer;
 `
 
 export const NavBar = ({ title, previous, action, actionLabel, ...props }) => (
   <Wrapper>
-    <NavButton onClick={previous}>
-      <img src={back} width={16} height={16} alt="" />
-      Voltar
-    </NavButton>
-    <Title>{title}</Title>
-    <NavButton onClick={action}>{actionLabel}</NavButton>
+    <Container>
+      <NavButton onClick={previous}>
+        <img src={back} width={16} height={16} alt="" />
+        Voltar
+      </NavButton>
+      <Title>{title}</Title>
+      <NavButton onClick={action}>{actionLabel}</NavButton>
+    </Container>
   </Wrapper>
 )

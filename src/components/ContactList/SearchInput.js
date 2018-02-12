@@ -3,7 +3,6 @@ import styled from "styled-components"
 import lupa from "../assets/search.svg"
 
 const Wrapper = styled.div`
-  position: relative;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -28,7 +27,6 @@ const Input = styled.input`
 `
 
 const Icon = styled.img`
-  position: absolute:
   align-self: center;
   margin-left: 5px;
 `

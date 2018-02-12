@@ -15,6 +15,7 @@ const toBase64 = file => {
 
 const Wrapper = styled.div`
   grid-column: 2;
+  padding-top: 55px;
   padding-bottom: 50px;
 `
 
@@ -77,57 +78,59 @@ class ContactEdit extends React.Component {
     const { name, last_name, email, phone, address, picture } = this.state
     const { goBack } = this.props.history
     return (
-      <Wrapper>
+      <React.Fragment>
         <NavBar
           title={name}
           previous={goBack}
           action={goBack}
           actionLabel="Salvar"
         />
-        <Form onSubmit={this.handleSubmit}>
-          <Photo image={picture} onChange={this.pictureChange} />
-          <TextInput
-            name="name"
-            label="Nome"
-            value={name}
-            onChange={this.textChange}
-            required
-            tabIndex="1"
-          />
-          <TextInput
-            name="last_name"
-            label="Sobrenome"
-            value={last_name}
-            onChange={this.textChange}
-            tabIndex="2"
-          />
-          <TextInput
-            name="email"
-            label="Email"
-            type="email"
-            value={email}
-            onChange={this.textChange}
-            tabIndex="3"
-          />
-          <MaskInput
-            name="phone"
-            label="Telefone"
-            type="tel"
-            mask="(99) 99999-9999"
-            value={phone}
-            onChange={this.textChange}
-            tabIndex="4"
-          />
-          <TextInput
-            name="address"
-            label="Endereço"
-            value={address}
-            onChange={this.textChange}
-            tabIndex="5"
-          />
-          <input type="submit" style={{ display: "none" }} />
-        </Form>
-      </Wrapper>
+        <Wrapper>
+          <Form onSubmit={this.handleSubmit}>
+            <Photo image={picture} onChange={this.pictureChange} />
+            <TextInput
+              name="name"
+              label="Nome"
+              value={name}
+              onChange={this.textChange}
+              required
+              tabIndex="1"
+            />
+            <TextInput
+              name="last_name"
+              label="Sobrenome"
+              value={last_name}
+              onChange={this.textChange}
+              tabIndex="2"
+            />
+            <TextInput
+              name="email"
+              label="Email"
+              type="email"
+              value={email}
+              onChange={this.textChange}
+              tabIndex="3"
+            />
+            <MaskInput
+              name="phone"
+              label="Telefone"
+              type="tel"
+              mask="(99) 99999-9999"
+              value={phone}
+              onChange={this.textChange}
+              tabIndex="4"
+            />
+            <TextInput
+              name="address"
+              label="Endereço"
+              value={address}
+              onChange={this.textChange}
+              tabIndex="5"
+            />
+            <input type="submit" style={{ display: "none" }} />
+          </Form>
+        </Wrapper>
+      </React.Fragment>
     )
   }
 }

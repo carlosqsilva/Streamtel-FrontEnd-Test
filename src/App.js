@@ -48,7 +48,7 @@ class App extends Component {
 }
 
 const state = state => ({
-  state: state
+  state
 })
 
 const actions = dispatch => ({

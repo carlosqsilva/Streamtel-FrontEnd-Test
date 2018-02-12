@@ -6,15 +6,12 @@ import { AddButton } from "../Buttons"
 
 const Wrapper = styled.div`
   grid-column: 2;
-  position: relative;
   padding: 110px 10px 10px 10px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
 `
-
-const Fragment = React.Fragment
 
 class ContactList extends React.Component {
   state = {
@@ -29,7 +26,7 @@ class ContactList extends React.Component {
     const { contacts } = this.props
     const { filter } = this.state
     return (
-      <Fragment>
+      <React.Fragment>
         <SearchInput
           onChange={this.handleFilter}
           placeholder="Buscar contato..."
@@ -44,7 +41,7 @@ class ContactList extends React.Component {
             .map(contact => <Contact key={contact.id} {...contact} />)}
           <AddButton to="/new" />
         </Wrapper>
-      </Fragment>
+      </React.Fragment>
     )
   }
 }

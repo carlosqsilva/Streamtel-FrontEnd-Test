@@ -6,7 +6,7 @@ import { NavBar } from "../NavBar"
 
 const Wrapper = styled.div`
   grid-column: 2;
-  position: relative;
+  padding-top: 55px;
 `
 
 const Container = styled.div`
@@ -33,7 +33,7 @@ const ContactInfo = ({ match, contacts, remove, history }) => {
     contact => contact.id === id
   )
   return (
-    <Wrapper>
+    <React.Fragment>
       <NavBar
         title={name}
         previous={history.goBack}
@@ -43,33 +43,35 @@ const ContactInfo = ({ match, contacts, remove, history }) => {
           remove(id)
         }}
       />
-      <Header background={picture}>
-        <p>
-          <span>{name}</span> <span>{last_name}</span>
-        </p>
-        <EditButton to={`/edit/${id}`} />
-      </Header>
-      <Container>
-        {phone && (
-          <Item>
-            <p>Telefone</p>
-            <a href={`tel:${phone}`}>{phone}</a>
-          </Item>
-        )}
-        {email && (
-          <Item>
-            <p>Email</p>
-            <a href={`mailto:${email}`}>{email}</a>
-          </Item>
-        )}
-        {address && (
-          <Item>
-            <p>Endereço</p>
-            <a>{address}</a>
-          </Item>
-        )}
-      </Container>
-    </Wrapper>
+      <Wrapper>
+        <Header background={picture}>
+          <p>
+            <span>{name}</span> <span>{last_name}</span>
+          </p>
+          <EditButton to={`/edit/${id}`} />
+        </Header>
+        <Container>
+          {phone && (
+            <Item>
+              <p>Telefone</p>
+              <a href={`tel:${phone}`}>{phone}</a>
+            </Item>
+          )}
+          {email && (
+            <Item>
+              <p>Email</p>
+              <a href={`mailto:${email}`}>{email}</a>
+            </Item>
+          )}
+          {address && (
+            <Item>
+              <p>Endereço</p>
+              <a>{address}</a>
+            </Item>
+          )}
+        </Container>
+      </Wrapper>
+    </React.Fragment>
   )
 }
 
