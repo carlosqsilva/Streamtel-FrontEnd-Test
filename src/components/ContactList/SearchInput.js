@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import lupa from "../assets/search.svg"
 
-const Wrapper = styled.div`
+const Wrapper = styled.label`
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -11,7 +11,7 @@ const Wrapper = styled.div`
   background: #fff;
   border-radius: 5px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
-  min-width: 290px;
+  width: 90%;
   @media (min-width: 550px) {
     width: 500px;
   }
