@@ -1,8 +1,8 @@
 import React from "react"
 import styled from "styled-components"
-import { SearchInput } from "./SearchInput"
-import { Contact } from "./ContactCard"
-import { AddButton } from "../Buttons"
+import { InputSearch } from "../Components/InputSearch"
+import { Contact } from "../Components/Contact"
+import { AddButton } from "../Components/Buttons"
 
 const Wrapper = styled.div`
   grid-column: 2;
@@ -13,7 +13,7 @@ const Wrapper = styled.div`
   align-items: center;
 `
 
-class ContactList extends React.Component {
+class Home extends React.Component {
   state = {
     filter: ""
   }
@@ -27,7 +27,7 @@ class ContactList extends React.Component {
     const { filter } = this.state
     return (
       <React.Fragment>
-        <SearchInput
+        <InputSearch
           onChange={this.handleFilter}
           placeholder="Buscar contato..."
         />
@@ -46,4 +46,4 @@ class ContactList extends React.Component {
   }
 }
 
-export default ContactList
+export default Home

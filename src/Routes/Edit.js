@@ -1,8 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import { TextInput, MaskInput } from "./TextInput"
-import { Photo } from "./ImageInput"
-import { NavBar } from "../NavBar"
+import { InputText, InputImage } from "../Components/Inputs"
+import { NavBar } from "../Components/NavBar"
 
 const toBase64 = file => {
   return new Promise((resolve, reject) => {
@@ -27,7 +26,7 @@ const Form = styled.form`
   align-items: center;
 `
 
-class ContactEdit extends React.Component {
+class Edit extends React.Component {
   state = {
     name: "",
     last_name: "",
@@ -87,8 +86,8 @@ class ContactEdit extends React.Component {
         />
         <Wrapper>
           <Form onSubmit={this.handleSubmit} autoComplete="off">
-            <Photo image={picture} onChange={this.pictureChange} />
-            <TextInput
+            <InputImage image={picture} onChange={this.pictureChange} />
+            <InputText
               name="name"
               label="Nome"
               value={name}
@@ -96,14 +95,14 @@ class ContactEdit extends React.Component {
               required
               tabIndex="1"
             />
-            <TextInput
+            <InputText
               name="last_name"
               label="Sobrenome"
               value={last_name}
               onChange={this.textChange}
               tabIndex="2"
             />
-            <TextInput
+            <InputText
               name="email"
               label="Email"
               type="email"
@@ -111,7 +110,7 @@ class ContactEdit extends React.Component {
               onChange={this.textChange}
               tabIndex="3"
             />
-            <MaskInput
+            <InputText
               name="phone"
               label="Telefone"
               type="tel"
@@ -120,7 +119,7 @@ class ContactEdit extends React.Component {
               onChange={this.textChange}
               tabIndex="4"
             />
-            <TextInput
+            <InputText
               name="address"
               label="Endereço"
               value={address}
@@ -135,4 +134,4 @@ class ContactEdit extends React.Component {
   }
 }
 
-export default ContactEdit
+export default Edit

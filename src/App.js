@@ -2,7 +2,9 @@ import React, { Component } from "react"
 import styled from "styled-components"
 import { connect } from "react-redux"
 import { HashRouter as Router, Route } from "react-router-dom"
-import { ContactList, ContactInfo, ContactEdit } from "./components"
+import Home from "./Routes/Home"
+import Info from "./Routes/Info"
+import Edit from "./Routes/Edit"
 
 import { add_contact, update_contact, remove_contact } from "./store/actions"
 
@@ -13,38 +15,32 @@ const Container = styled.div`
   width: 100%;
 `
 
-class App extends Component {
-  render() {
-    const { add, update, remove } = this.props
-    const { contact } = this.props.state
-    return (
-      <Router>
-        <Container>
-          <Route
-            exact
-            path="/"
-            render={props => <ContactList contacts={contact} {...props} />}
-          />
-          <Route
-            path="/new"
-            render={props => <ContactEdit submit={add} {...props} />}
-          />
-          <Route
-            path="/contact/:id"
-            render={props => (
-              <ContactInfo remove={remove} contacts={contact} {...props} />
-            )}
-          />
-          <Route
-            path="/edit/:id"
-            render={props => (
-              <ContactEdit submit={update} contacts={contact} {...props} />
-            )}
-          />
-        </Container>
-      </Router>
-    )
-  }
+const App = ({ add, update, remove, ...props }) => {
+  const { contact } = props.state
+  return (
+    <Router>
+      <Container>
+        <Route
+          exact
+          path="/"
+          render={props => <Home contacts={contact} {...props} />}
+        />
+        <Route
+          path="/contact/:id"
+          render={props => (
+            <Info remove={remove} contacts={contact} {...props} />
+          )}
+        />
+        <Route path="/new" render={props => <Edit submit={add} {...props} />} />
+        <Route
+          path="/edit/:id"
+          render={props => (
+            <Edit submit={update} contacts={contact} {...props} />
+          )}
+        />
+      </Container>
+    </Router>
+  )
 }
 
 const state = state => ({

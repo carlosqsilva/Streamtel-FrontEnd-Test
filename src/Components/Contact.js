@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "react-router-dom"
-import image from "../assets/photo.svg"
+import image from "../Assets/photo.svg"
 
 const Container = styled(Link)`
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);

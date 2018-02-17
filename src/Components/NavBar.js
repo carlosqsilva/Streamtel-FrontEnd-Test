@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import back from "./assets/back.svg"
+import back from "../Assets/back.svg"
 
 const Wrapper = styled.nav`
   position: fixed;

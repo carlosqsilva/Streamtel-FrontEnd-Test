@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import lupa from "../assets/search.svg"
+import lupa from "./assets/search.svg"
 
 const Wrapper = styled.label`
   display: flex;
@@ -45,7 +45,7 @@ const Header = styled.div`
   z-index: 1;
 `
 
-export const SearchInput = ({ onChange, ...props }) => (
+export const InputSearch = ({ onChange, ...props }) => (
   <Header>
     <Wrapper>
       <Icon src={lupa} alt="" />
