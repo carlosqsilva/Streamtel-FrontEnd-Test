@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import lupa from "./assets/search.svg"
+import lupa from "../Assets/search.svg"
 
 const Wrapper = styled.label`
   display: flex;
