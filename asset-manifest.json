@@ -1,9 +1,13 @@
 {
-  "main.js": "static/js/main.a09ad0ba.js",
-  "main.js.map": "static/js/main.a09ad0ba.js.map",
+  "main.js": "static/js/main.e0194ec3.js",
+  "main.js.map": "static/js/main.e0194ec3.js.map",
+  "runtime.js": "static/js/runtime.4d2613d3.js",
+  "runtime.js.map": "static/js/runtime.4d2613d3.js.map",
   "static/media/add.svg": "static/media/add.15182dd9.svg",
   "static/media/back.svg": "static/media/back.8ac4b9a7.svg",
   "static/media/edit.svg": "static/media/edit.8d076bcc.svg",
   "static/media/photo.svg": "static/media/photo.261eb42c.svg",
-  "static/media/search.svg": "static/media/search.f7abaefb.svg"
+  "static/media/search.svg": "static/media/search.f7abaefb.svg",
+  "vendor.js": "static/js/vendor.49a69d9e.js",
+  "vendor.js.map": "static/js/vendor.49a69d9e.js.map"
 }
