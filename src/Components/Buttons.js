@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components"
-import { Link } from "react-router-dom"
+import Link from "react-router-dom/es/Link"
 
 import add from "../Assets/add.svg"
 import edit from "../Assets/edit.svg"

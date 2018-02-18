@@ -1,7 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 import { connect } from "react-redux"
-import { HashRouter as Router, Route } from "react-router-dom"
+import HashRouter from "react-router-dom/es/HashRouter"
+import Route from "react-router-dom/es/Route"
 import Home from "./Routes/Home"
 import Info from "./Routes/Info"
 import Edit from "./Routes/Edit"
@@ -18,7 +19,7 @@ const Container = styled.div`
 const App = ({ add, update, remove, ...props }) => {
   const { contact } = props.state
   return (
-    <Router>
+    <HashRouter>
       <Container>
         <Route
           exact
@@ -39,7 +40,7 @@ const App = ({ add, update, remove, ...props }) => {
           )}
         />
       </Container>
-    </Router>
+    </HashRouter>
   )
 }
 
