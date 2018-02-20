@@ -1,13 +1,13 @@
 {
-  "main.js": "static/js/main.4c94c38b.js",
-  "main.js.map": "static/js/main.4c94c38b.js.map",
-  "runtime.js": "static/js/runtime.6d364135.js",
-  "runtime.js.map": "static/js/runtime.6d364135.js.map",
-  "static/media/add.svg": "static/media/add.15182dd9.svg",
-  "static/media/back.svg": "static/media/back.8ac4b9a7.svg",
-  "static/media/edit.svg": "static/media/edit.8d076bcc.svg",
-  "static/media/photo.svg": "static/media/photo.261eb42c.svg",
-  "static/media/search.svg": "static/media/search.f7abaefb.svg",
+  "main.js": "static/js/main.19c77ba2.js",
+  "main.js.map": "static/js/main.19c77ba2.js.map",
+  "runtime.js": "static/js/runtime.7b91c5a1.js",
+  "runtime.js.map": "static/js/runtime.7b91c5a1.js.map",
+  "static/media/add.svg": "static/media/add.a2a7c5cb.svg",
+  "static/media/back.svg": "static/media/back.cc33cc52.svg",
+  "static/media/edit.svg": "static/media/edit.321a75d6.svg",
+  "static/media/photo.svg": "static/media/photo.1e9e32fb.svg",
+  "static/media/search.svg": "static/media/search.cd8bf1e1.svg",
   "vendor.js": "static/js/vendor.b1adaadb.js",
   "vendor.js.map": "static/js/vendor.b1adaadb.js.map"
 }
