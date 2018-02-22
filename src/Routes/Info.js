@@ -56,7 +56,7 @@ const Info = ({ match, contacts, remove, history }) => {
     contact => contact.id === id
   )
   return (
-    <React.Fragment>
+    <Wrapper>
       <NavBar
         title={name}
         previous={history.goBack}
@@ -66,35 +66,33 @@ const Info = ({ match, contacts, remove, history }) => {
           remove(id)
         }}
       />
-      <Wrapper>
-        <Header background={picture}>
-          <p>
-            <span>{name}</span> <span>{last_name}</span>
-          </p>
-          <EditButton to={`/edit/${id}`} />
-        </Header>
-        <Container>
-          {phone && (
-            <Item>
-              <p>Telefone</p>
-              <a href={`tel:${phone}`}>{phone}</a>
-            </Item>
-          )}
-          {email && (
-            <Item>
-              <p>Email</p>
-              <a href={`mailto:${email}`}>{email}</a>
-            </Item>
-          )}
-          {address && (
-            <Item>
-              <p>Endereço</p>
-              <a>{address}</a>
-            </Item>
-          )}
-        </Container>
-      </Wrapper>
-    </React.Fragment>
+      <Header background={picture}>
+        <p>
+          <span>{name}</span> <span>{last_name}</span>
+        </p>
+        <EditButton to={`/edit/${id}`} />
+      </Header>
+      <Container>
+        {phone && (
+          <Item>
+            <p>Telefone</p>
+            <a href={`tel:${phone}`}>{phone}</a>
+          </Item>
+        )}
+        {email && (
+          <Item>
+            <p>Email</p>
+            <a href={`mailto:${email}`}>{email}</a>
+          </Item>
+        )}
+        {address && (
+          <Item>
+            <p>Endereço</p>
+            <a>{address}</a>
+          </Item>
+        )}
+      </Container>
+    </Wrapper>
   )
 }
 

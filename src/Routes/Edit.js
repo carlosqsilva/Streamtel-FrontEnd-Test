@@ -77,59 +77,57 @@ class Edit extends React.Component {
     const { name, last_name, email, phone, address, picture } = this.state
     const { goBack } = this.props.history
     return (
-      <React.Fragment>
+      <Wrapper>
         <NavBar
           title={name}
           previous={goBack}
           action={goBack}
           actionLabel="Salvar"
         />
-        <Wrapper>
-          <Form onSubmit={this.handleSubmit} autoComplete="off">
-            <InputImage image={picture} onChange={this.pictureChange} />
-            <InputText
-              name="name"
-              label="Nome"
-              value={name}
-              onChange={this.textChange}
-              required
-              tabIndex="1"
-            />
-            <InputText
-              name="last_name"
-              label="Sobrenome"
-              value={last_name}
-              onChange={this.textChange}
-              tabIndex="2"
-            />
-            <InputText
-              name="email"
-              label="Email"
-              type="email"
-              value={email}
-              onChange={this.textChange}
-              tabIndex="3"
-            />
-            <InputText
-              name="phone"
-              label="Telefone"
-              type="tel"
-              mask="(99) 99999-9999"
-              value={phone}
-              onChange={this.textChange}
-              tabIndex="4"
-            />
-            <InputText
-              name="address"
-              label="Endereço"
-              value={address}
-              onChange={this.textChange}
-              tabIndex="5"
-            />
-            <input type="submit" style={{ display: "none" }} />
-          </Form>
-        </Wrapper>
-      </React.Fragment>
+        <Form onSubmit={this.handleSubmit} autoComplete="off">
+          <InputImage image={picture} onChange={this.pictureChange} />
+          <InputText
+            name="name"
+            label="Nome"
+            value={name}
+            onChange={this.textChange}
+            required
+            tabIndex="1"
+          />
+          <InputText
+            name="last_name"
+            label="Sobrenome"
+            value={last_name}
+            onChange={this.textChange}
+            tabIndex="2"
+          />
+          <InputText
+            name="email"
+            label="Email"
+            type="email"
+            value={email}
+            onChange={this.textChange}
+            tabIndex="3"
+          />
+          <InputText
+            name="phone"
+            label="Telefone"
+            type="tel"
+            mask="(99) 99999-9999"
+            value={phone}
+            onChange={this.textChange}
+            tabIndex="4"
+          />
+          <InputText
+            name="address"
+            label="Endereço"
+            value={address}
+            onChange={this.textChange}
+            tabIndex="5"
+          />
+          <input type="submit" style={{ display: "none" }} />
+        </Form>
+      </Wrapper>
     )
   }
 }

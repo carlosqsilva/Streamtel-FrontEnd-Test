@@ -26,22 +26,20 @@ class Home extends React.Component {
     const { contacts } = this.props
     const { filter } = this.state
     return (
-      <React.Fragment>
+      <Wrapper>
         <InputSearch
           onChange={this.handleFilter}
           placeholder="Buscar contato..."
         />
-        <Wrapper>
-          {contacts
-            .filter(
-              _ =>
-                _.name.toLowerCase().includes(filter.toLowerCase()) ||
-                _.email.includes(filter)
-            )
-            .map(contact => <Contact key={contact.id} {...contact} />)}
-          <AddButton to="/new" />
-        </Wrapper>
-      </React.Fragment>
+        {contacts
+          .filter(
+            _ =>
+              _.name.toLowerCase().includes(filter.toLowerCase()) ||
+              _.email.includes(filter)
+          )
+          .map(contact => <Contact key={contact.id} {...contact} />)}
+        <AddButton to="/new" />
+      </Wrapper>
     )
   }
 }
